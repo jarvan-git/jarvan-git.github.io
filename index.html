@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>Jarvan-git</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <style type="text/css">
+  .toolbardemoScrollShrink .face {
+  width: 48px;
+  margin: 16px;
+  border-radius: 48px;
+  border: 1px solid #ddd; }
+  </style>
 </head>
-
-<body ng-app="BlankApp" ng-cloak>
-    <div ng-controller="AppCtrl" layout="column" style="height:600px" ng-cloak>
-  <md-toolbar md-scroll-shrink ng-if="true" ng-controller="TitleController">
+<body ng-app="ptso" ng-cloak>
+  <!--
+    Your HTML content here
+  -->  
+  <div ng-controller="AppCtrl" layout="column" style="height:600px" ng-cloak>
+  <md-toolbar md-scroll-shrink ng-if="true" ng-controller="TitleController" style="background-color: #80DEEA;">
     <div class="md-toolbar-tools">
       <h3>
         <span>{{title}}</span>
@@ -21,7 +26,6 @@
   <md-content flex>
     <md-list>
       <md-list-item class="md-3-line" ng-repeat="item in todos">
-        <img ng-src="{{item.face}}" alt="{{item.who}}" class="md-avatar">
         <div class="md-list-item-text">
           <h3>{{item.what}}</h3>
           <h4>{{item.who}}</h4>
@@ -33,14 +37,20 @@
       </md-list-item>
     </md-list>
   </md-content>
-</div>    <!-- Angular Material requires Angular.js Libraries -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-    <!-- Angular Material Library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-    <script src="app.js"></script>
-</body>
+</div>
 
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script src="app.js"></script>  
+  
+</body>
 </html>
