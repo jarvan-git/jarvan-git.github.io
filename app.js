@@ -1,10 +1,8 @@
 	var app = angular.module('ptso', ['ngMaterial']);
-	
 	app.controller('DemoCtrl', DemoCtrl);
   function DemoCtrl ($timeout, $q, $log) {
     var self = this;
     self.simulateQuery = false;
-    self.isDisabled    = false;
     // list of `state` value/display objects
     self.states        = loadAll();
     self.querySearch   = querySearch;
@@ -48,7 +46,7 @@
               Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
               North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
               South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
-              Wisconsin, Wyoming';
+              Wisconsin, Wyoming, 中文, 英文';
       return allStates.split(/, +/g).map( function (state) {
         return {
           value: state.toLowerCase(),
